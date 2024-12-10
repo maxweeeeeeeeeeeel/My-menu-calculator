@@ -1,0 +1,369 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f7eeef"
+    tools:context=".MainActivity">
+
+
+    <LinearLayout
+        android:layout_width="376dp"
+        android:id="@+id/textView"
+        android:layout_height="347dp"
+        android:layout_above="@+id/buttonsLayout"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="0dp"
+        android:layout_marginLeft="0dp"
+        android:layout_marginTop="0dp"
+        android:layout_marginEnd="0dp"
+        android:layout_marginRight="0dp"
+        android:layout_marginBottom="0dp"
+        android:background="@drawable/rounded_bottom_corners"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/result_tv"
+            android:layout_width="376dp"
+            android:layout_height="172dp"
+            android:text="0"
+            android:layout_marginTop="20dp"
+            android:textAlignment="textEnd"
+            android:textColor="@color/black"
+            android:textSize="32dp" />
+
+        <TextView
+            android:id="@+id/solution_tv"
+            android:layout_width="376dp"
+            android:layout_height="172dp"
+            android:textAlignment="textEnd"
+            android:text=""
+            android:textSize="64dp"
+            android:textColor="@color/black"/>
+
+    </LinearLayout>
+
+
+    <!-- Premier LinearLayout (Vertical) -->
+    <LinearLayout
+        android:id="@+id/buttonsLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingVertical="16dp"
+        android:layout_alignParentBottom="true">
+
+
+        <!-- Deuxième LinearLayout (Horizontal) -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <!-- Bouton AC -->
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/buttonAc"
+                style="@style/ShapeAppearanceOverlay.Material3.FloatingActionButton"
+                android:layout_width="72dp"
+                android:layout_height="72dp"
+                android:layout_margin="12dp"
+                android:backgroundTint="#F8E1AE"
+                android:text="AC"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                app:cornerRadius="36dp" />
+
+            <!-- Bouton Parenthèses -->
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/buttonParenthese"
+                style="@style/ShapeAppearanceOverlay.Material3.FloatingActionButton"
+                android:layout_width="72dp"
+                android:layout_height="72dp"
+                android:layout_margin="12dp"
+                android:backgroundTint="#F8BEBC"
+                android:text="("
+                android:textColor="@color/black"
+                android:textSize="22sp"
+                app:cornerRadius="36dp" />
+
+            <!-- Bouton Pourcentage -->
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/buttonPourcent"
+                style="@style/ShapeAppearanceOverlay.Material3.FloatingActionButton"
+                android:layout_width="72dp"
+                android:layout_height="72dp"
+                android:layout_margin="12dp"
+                android:backgroundTint="#F8BEBC"
+                android:text=")"
+                android:textColor="@color/black"
+                android:textSize="22sp"
+                app:cornerRadius="36dp" />
+
+            <!-- Bouton Division -->
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/buttonDivision"
+                style="@style/ShapeAppearanceOverlay.Material3.FloatingActionButton"
+                android:layout_width="72dp"
+                android:layout_height="72dp"
+                android:layout_margin="12dp"
+                android:backgroundTint="#F8BEBC"
+                android:text="/"
+                android:textColor="@color/black"
+                android:textSize="22sp"
+                app:cornerRadius="36dp" />
+
+        </LinearLayout> <!-- Fin du LinearLayout horizontal -->
+
+        <!-- troisieme LinearLayout (Horizontal) -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <!-- Bouton AC -->
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/button1"
+                style="@style/ShapeAppearanceOverlay.Material3.FloatingActionButton"
+                android:layout_width="72dp"
+                android:layout_height="72dp"
+                android:layout_margin="12dp"
+                android:backgroundTint="#F9DCD9"
+                android:text="7"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                app:cornerRadius="36dp" />
+
+            <!-- Bouton Parenthèses -->
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/button2"
+                style="@style/ShapeAppearanceOverlay.Material3.FloatingActionButton"
+                android:layout_width="72dp"
+                android:layout_height="72dp"
+                android:layout_margin="12dp"
+                android:backgroundTint="#F9DCD9"
+                android:text="8"
+                android:textColor="@color/black"
+                android:textSize="22sp"
+                app:cornerRadius="36dp" />
+
+            <!-- Bouton Pourcentage -->
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/button3"
+                style="@style/ShapeAppearanceOverlay.Material3.FloatingActionButton"
+                android:layout_width="72dp"
+                android:layout_height="72dp"
+                android:layout_margin="12dp"
+                android:backgroundTint="#F9DCD9"
+                android:text="9"
+                android:textColor="@color/black"
+                android:textSize="22sp"
+                app:cornerRadius="36dp" />
+
+            <!-- Bouton Division -->
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/button4"
+                style="@style/ShapeAppearanceOverlay.Material3.FloatingActionButton"
+                android:layout_width="72dp"
+                android:layout_height="72dp"
+                android:layout_margin="12dp"
+                android:backgroundTint="#F8BEBC"
+                android:text="*"
+                android:textColor="@color/black"
+                android:textSize="22sp"
+                app:cornerRadius="36dp" />
+
+        </LinearLayout> <!-- Fin du LinearLayout horizontal -->
+
+        <!-- quatrieme LinearLayout (Horizontal) -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <!-- Bouton AC -->
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/button5"
+                style="@style/ShapeAppearanceOverlay.Material3.FloatingActionButton"
+                android:layout_width="72dp"
+                android:layout_height="72dp"
+                android:layout_margin="12dp"
+                android:backgroundTint="#F9DCD9"
+                android:text="4"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                app:cornerRadius="36dp" />
+
+            <!-- Bouton Parenthèses -->
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/button6"
+                style="@style/ShapeAppearanceOverlay.Material3.FloatingActionButton"
+                android:layout_width="72dp"
+                android:layout_height="72dp"
+                android:layout_margin="12dp"
+                android:backgroundTint="#F9DCD9"
+                android:text="5"
+                android:textColor="@color/black"
+                android:textSize="22sp"
+                app:cornerRadius="36dp" />
+
+            <!-- Bouton Pourcentage -->
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/button7"
+                style="@style/ShapeAppearanceOverlay.Material3.FloatingActionButton"
+                android:layout_width="72dp"
+                android:layout_height="72dp"
+                android:layout_margin="12dp"
+                android:backgroundTint="#F9DCD9"
+                android:text="6"
+                android:textColor="@color/black"
+                android:textSize="22sp"
+                app:cornerRadius="36dp" />
+
+            <!-- Bouton Division -->
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/buttonSoustraction"
+                style="@style/ShapeAppearanceOverlay.Material3.FloatingActionButton"
+                android:layout_width="72dp"
+                android:layout_height="72dp"
+                android:layout_margin="12dp"
+                android:backgroundTint="#F8BEBC"
+                android:text="-"
+                android:textColor="@color/black"
+                android:textSize="22sp"
+                app:cornerRadius="36dp" />
+
+        </LinearLayout> <!-- Fin du LinearLayout horizontal -->
+
+        <!-- cinquieme LinearLayout (Horizontal) -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <!-- Bouton AC -->
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/button8"
+                style="@style/ShapeAppearanceOverlay.Material3.FloatingActionButton"
+                android:layout_width="72dp"
+                android:layout_height="72dp"
+                android:layout_margin="12dp"
+                android:backgroundTint="#F9DCD9"
+                android:text="1"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                app:cornerRadius="36dp" />
+
+            <!-- Bouton Parenthèses -->
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/button9"
+                style="@style/ShapeAppearanceOverlay.Material3.FloatingActionButton"
+                android:layout_width="72dp"
+                android:layout_height="72dp"
+                android:layout_margin="12dp"
+                android:backgroundTint="#F9DCD9"
+                android:text="2"
+                android:textColor="@color/black"
+                android:textSize="22sp"
+                app:cornerRadius="36dp" />
+
+            <!-- Bouton Pourcentage -->
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/button10"
+                style="@style/ShapeAppearanceOverlay.Material3.FloatingActionButton"
+                android:layout_width="72dp"
+                android:layout_height="72dp"
+                android:layout_margin="12dp"
+                android:backgroundTint="#F9DCD9"
+                android:text="3"
+                android:textColor="@color/black"
+                android:textSize="22sp"
+                app:cornerRadius="36dp" />
+
+            <!-- Bouton Division -->
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/buttonAddition"
+                style="@style/ShapeAppearanceOverlay.Material3.FloatingActionButton"
+                android:layout_width="72dp"
+                android:layout_height="72dp"
+                android:layout_margin="12dp"
+                android:backgroundTint="#F8BEBC"
+                android:text="+"
+                android:textColor="@color/black"
+                android:textSize="22sp"
+                app:cornerRadius="36dp" />
+
+        </LinearLayout> <!-- Fin du LinearLayout horizontal -->
+
+        <!-- sizieme LinearLayout (Horizontal) -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <!-- Bouton AC -->
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/button11"
+                style="@style/ShapeAppearanceOverlay.Material3.FloatingActionButton"
+                android:layout_width="72dp"
+                android:layout_height="72dp"
+                android:layout_margin="12dp"
+                android:backgroundTint="#F9DCD9"
+                android:text="0"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                app:cornerRadius="36dp" />
+
+            <!-- Bouton Parenthèses -->
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/buttonPoint"
+                style="@style/ShapeAppearanceOverlay.Material3.FloatingActionButton"
+                android:layout_width="72dp"
+                android:layout_height="72dp"
+                android:layout_margin="12dp"
+                android:backgroundTint="#F9DCD9"
+                android:text="."
+                android:textColor="@color/black"
+                android:textSize="22sp"
+                app:cornerRadius="36dp" />
+
+            <!-- Bouton Pourcentage -->
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/buttonSupprimer"
+                style="@style/ShapeAppearanceOverlay.Material3.FloatingActionButton"
+                android:layout_width="72dp"
+                android:layout_height="72dp"
+                android:layout_margin="12dp"
+                android:backgroundTint="#F9DCD9"
+                android:text="C"
+                android:textColor="@color/black"
+                android:textSize="22sp"
+                app:cornerRadius="36dp" />
+
+            <!-- Bouton Division -->
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/buttonResultat"
+                style="@style/ShapeAppearanceOverlay.Material3.FloatingActionButton"
+                android:layout_width="72dp"
+                android:layout_height="72dp"
+                android:layout_margin="12dp"
+                android:backgroundTint="#F8BEBC"
+                android:text="="
+                android:textColor="@color/black"
+                android:textSize="22sp"
+                app:cornerRadius="36dp" />
+
+        </LinearLayout> <!-- Fin du LinearLayout horizontal -->
+
+    </LinearLayout> <!-- Fin du LinearLayout vertical -->
+
+</RelativeLayout>
